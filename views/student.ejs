@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <% for ( let i of user) {%>
+        <h1 class="heading">
+          Student <%= i.user_name %>
+        </h1>
+        <%} %>
+        <ul>
+          <ul class="courses_list">
+            <li class="courses_item">
+              <h3 id="title">Group name</h3>
+            </li>
+            <% for ( let i of gr) {%>
+            <li class="courses_item">
+              <h3 id="title"><%= i.group_name %></h3>
+
+              <ul class="courses_list">
+                <li class=" courses_item-color">
+                  <h3 id="title">Homeworks</h3>
+                </li>
+                <% for ( let i of hw) {%>
+                <li class=" courses_item-color">
+                  <p class="course_price "><%= i.msg %></p>
+                </li>
+                <%} %>
+              </ul>
+            </li>
+            <%} %>
+          </ul>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

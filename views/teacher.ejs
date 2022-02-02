@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="teachers">
+      <div class="container">
+        <div>
+          <h1 class="heading">Teacher</h1>
+          <ul class="courses_list">
+            <li class="courses_item">
+              <h3 id="title">Group name</h3>
+            </li>
+            <% for ( let i of gr) {%>
+            <li class="courses_item">
+              <h3 id="title"><%= i.gr_name %></h3>
+
+              <ul>
+                <li>
+                  <h3>Students</h3>
+                </li>
+                <% for (let s of gr[0].student) {%>
+                <li class="courses_item-color">
+                  <h4><%= s.user_name %></h4>
+                </li>
+                <%} %>
+              </ul>
+            </li>
+            <%} %>
+          </ul>
+        </div>
+
+        <div class="form">
+          <form
+            action="/newhw"
+            method="POST"
+            enctype="application/x-www-form-urlencoded"
+          >
+            <div class="text">
+              <input
+                class="input"
+                type="text"
+                name="homework"
+                placeholder="write Homework"
+              />
+            </div>
+
+            <select name="grID">
+              <% for ( let i of gr) {%>
+              <option value=<%= i.gr_id %>><%= i.gr_name %></option>
+              <%} %>
+            </select>
+
+            <button>Send</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

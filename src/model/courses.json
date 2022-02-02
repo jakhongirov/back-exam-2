@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "course_name": "Web-Programing",
+        "price": "700000 sum",
+        "teacher_id": 1
+    },
+    {
+        "id": 2,
+        "course_name": "Web-designer",
+        "price": "700000 sum",
+        "teacher_id": 2
+    },
+    {
+        "id": 3,
+        "course_name": "UI/UX",
+        "price": "700000 sum",
+        "teacher_id": 3
+    }
+]

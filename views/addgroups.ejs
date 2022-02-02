@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="http://localhost:8000/courses">Courses</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="http://localhost:8000/groups">Groups</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="http://localhost:8000/teachers"
+            >Teachers</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="http://localhost:8000/students"
+            >Students</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <div class="container">
+      <h1 class="heading">Add Courses</h1>
+      <form
+        class="form_login"
+        action="/newGroup"
+        method="POST"
+        enctype="application/x-www-form-urlencoded"
+      >
+        <div>
+          <input
+            class="input"
+            type="text"
+            name="groupName"
+            placeholder="group name"
+            required
+          />
+        </div>
+
+        <select name="teacherID" required>
+          <% for( let i of teachers) {%>
+          <option value=<%= i.id %>><%= i.user_name %></option>
+          <%} %>
+        </select>
+        <select name="courseID" required>
+          <% for ( let i of courses) {%> 
+          <option value=<%= i.id %>><%= i.course_name %></option>
+           <%} %>
+        </select>
+        <button>Add</button>
+      </form>
+    </div>
+  </body>
+</html>

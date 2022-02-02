@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "user_surname": "Teshayev",
+        "user_name": "Baxtiyor",
+        "password": "1234",
+        "phone": "+998999999999",
+        "role": "teacher",
+        "courses_id": 1
+    },
+    {
+        "id": 2,
+        "user_surname": "Nodirov",
+        "user_name": "Nodir",
+        "password": "1234",
+        "phone": "+998999999999",
+        "role": "teacher",
+        "courses_id": 2
+    },
+    {
+        "id": 3,
+        "user_surname": "Bozorov",
+        "user_name": "Azamat",
+        "password": "1234",
+        "phone": "+998999999999",
+        "role": "teacher",
+        "courses_id": 3
+    },
+    {
+        "id": 4,
+        "user_surnama": "Jakhongirov",
+        "user_name": "Doniyor",
+        "password": "1234",
+        "phone": "+998999999998",
+        "role": "admin"
+    },
+    {
+        "id": 5,
+        "user_surnama": "Jakhongirov",
+        "user_name": "Diyor",
+        "password": "1234",
+        "phone": "+998999999998",
+        "role": "student",
+        "courses_id": 1,
+        "group_id": 1
+    }
+]
